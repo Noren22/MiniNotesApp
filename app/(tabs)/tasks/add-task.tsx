@@ -9,7 +9,7 @@ import {
   TextInput,
   View,
 } from "react-native";
-import { addTask } from "../lib/database";
+import { addTask } from "../../../lib/database";
 
 const statusOptions = ["Pending", "Ongoing", "Finished"];
 

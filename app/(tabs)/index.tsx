@@ -17,7 +17,10 @@ export default function Index() {
       <Text style={styles.title}>📝 Mini Notes</Text>
       <Text style={styles.subtitle}>Organize your tasks easily</Text>
 
-      <Pressable style={styles.button} onPress={() => router.push("/tasks")}>
+      <Pressable
+        style={styles.button}
+        onPress={() => router.push("/(tabs)/tasks/tasks")}
+      >
         <Text style={styles.buttonText}>Open Notes</Text>
       </Pressable>
     </View>
