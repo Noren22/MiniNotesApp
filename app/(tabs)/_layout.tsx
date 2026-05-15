@@ -27,9 +27,9 @@ export default function TasksLayout() {
         }}
       />
       <Tabs.Screen
-        name="tasks"
+        name="Notes"
         options={{
-          title: "Tasks",
+          title: "Notes",
           headerShown: false,
           tabBarIcon: ({ color, size, focused }) => (
             <Ionicons
