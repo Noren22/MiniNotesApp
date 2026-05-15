@@ -14,8 +14,8 @@ export default function Index() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>📝 Mini Notes</Text>
-      <Text style={styles.subtitle}>Organize your tasks easily</Text>
+      <Text style={styles.title}>📝 Mini Notes App</Text>
+      <Text style={styles.subtitle}>Organize your notes easily</Text>
 
       <Pressable
         style={styles.button}
