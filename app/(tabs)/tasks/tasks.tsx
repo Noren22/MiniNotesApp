@@ -26,7 +26,7 @@ export default function Tasks() {
     useCallback(() => {
       loadTasks();
     }, []),
-  );
+  ); 
 
   const handleDelete = (id: number) => {
     Alert.alert("Delete Note", "Are you sure you want to delete this note?", [
