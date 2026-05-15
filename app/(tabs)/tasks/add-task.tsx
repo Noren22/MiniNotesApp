@@ -21,11 +21,11 @@ export default function AddTaskScreen() {
   const handleSave = async () => {
     try {
       if (!title.trim()) {
-        throw new Error("Task title is required");
+        throw new Error("Note title is required");
       }
 
       addTask(title, description, status);
-      Alert.alert("Saved", `Task "${title}" added successfully.`);
+      Alert.alert("Saved", `Note "${title}" added successfully.`);
       router.back();
     } catch (error) {
       Alert.alert(
@@ -37,18 +37,18 @@ export default function AddTaskScreen() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Add Task</Text>
+      <Text style={styles.title}>Add Note</Text>
 
       <TextInput
         style={styles.input}
-        placeholder="Enter task title"
+        placeholder="Enter note title"
         value={title}
         onChangeText={setTitle}
       />
 
       <TextInput
         style={[styles.input, styles.textArea]}
-        placeholder="Enter task description"
+        placeholder="Enter note description"
         value={description}
         onChangeText={setDescription}
         multiline

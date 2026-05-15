@@ -28,11 +28,11 @@ export default function EditTaskScreen() {
   const handleUpdate = () => {
     try {
       if (!title.trim()) {
-        throw new Error("Task title is required");
+        throw new Error("Note title is required");
       }
 
       updateTask(Number(params.id), title, description, status);
-      Alert.alert("Success", `Task updated successfully.`);
+      Alert.alert("Success", `Note updated successfully.`);
       router.replace("/(tabs)/tasks/tasks");
     } catch (error) {
       Alert.alert(
@@ -44,18 +44,18 @@ export default function EditTaskScreen() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Edit Task</Text>
+      <Text style={styles.title}>Edit Note</Text>
 
       <TextInput
         style={styles.input}
-        placeholder="Enter task title"
+        placeholder="Enter note title"
         value={title}
         onChangeText={setTitle}
       />
 
       <TextInput
         style={[styles.input, styles.textArea]}
-        placeholder="Enter task description"
+        placeholder="Enter note description"
         value={description}
         onChangeText={setDescription}
         multiline
@@ -85,7 +85,7 @@ export default function EditTaskScreen() {
       </View>
 
       <Pressable style={styles.button} onPress={handleUpdate}>
-        <Text style={styles.buttonText}>Update Task</Text>
+        <Text style={styles.buttonText}>Update Note</Text>
       </Pressable>
     </View>
   );

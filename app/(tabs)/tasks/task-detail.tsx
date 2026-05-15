@@ -11,7 +11,7 @@ export default function TaskDetailScreen() {
   }>();
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Task Details</Text>
+      <Text style={styles.title}>Note Details</Text>
 
       <View style={styles.card}>
         <Text style={styles.label}>ID</Text>
@@ -35,7 +35,7 @@ export default function TaskDetailScreen() {
             })
           }
         >
-          <Text style={styles.editButtonText}>Edit Task</Text>
+          <Text style={styles.editButtonText}>Edit Note</Text>
         </Pressable>
       </View>
     </View>

@@ -18,7 +18,7 @@ export default function Tasks() {
       const data = getTasks();
       setTasks(data);
     } catch (error) {
-      Alert.alert("Load Error", "Failed to load tasks");
+      Alert.alert("Load Error", "Failed to load notes");
     }
   };
 
@@ -29,7 +29,7 @@ export default function Tasks() {
   );
 
   const handleDelete = (id: number) => {
-    Alert.alert("Delete Task", "Are you sure you want to delete this task?", [
+    Alert.alert("Delete Note", "Are you sure you want to delete this note?", [
       {
         text: "Cancel",
         style: "cancel",
@@ -42,7 +42,7 @@ export default function Tasks() {
             deleteTask(id);
             loadTasks();
           } catch (error) {
-            Alert.alert("Delete Error", "Failed to delete task");
+            Alert.alert("Delete Error", "Failed to delete note");
           }
         },
       },
@@ -51,17 +51,17 @@ export default function Tasks() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Task List</Text>
+      <Text style={styles.title}>Note List</Text>
 
       <Pressable
         style={styles.addButton}
         onPress={() => router.push("/(tabs)/tasks/add-task")}
       >
-        <Text style={styles.addButtonText}>Add Task</Text>
+        <Text style={styles.addButtonText}>Add Note</Text>
       </Pressable>
 
       {tasks.length === 0 ? (
-        <Text style={styles.emptyText}>No Tasks yet.</Text>
+        <Text style={styles.emptyText}>No Notes yet.</Text>
       ) : (
         <FlatList
           data={tasks}

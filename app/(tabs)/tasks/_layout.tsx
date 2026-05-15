@@ -9,10 +9,10 @@ export default function RootLayout() {
         headerTitleStyle: { fontWeight: "bold" },
       }}
     >
-      <Stack.Screen name="tasks" options={{ title: "Tasks" }} />
-      <Stack.Screen name="add-task" options={{ title: "Add Task" }} />
-      <Stack.Screen name="task-detail" options={{ title: "Task Details" }} />
-      <Stack.Screen name="edit-task" options={{ title: "Edit Task" }} />
+      <Stack.Screen name="tasks" options={{ title: "Notes" }} />
+      <Stack.Screen name="add-task" options={{ title: "Add Note" }} />
+      <Stack.Screen name="task-detail" options={{ title: "Note Details" }} />
+      <Stack.Screen name="edit-task" options={{ title: "Edit Note" }} />
     </Stack>
   );
 }
